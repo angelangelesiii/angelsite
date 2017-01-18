@@ -27,9 +27,17 @@
 		<div class="site-branding">
 			<?php
 			if ( is_front_page() && is_home() ) : ?>
+
+				<!-- Home page display -->
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<!-- End Home page display -->
+
 			<?php else : ?>
+
+				<!-- Other page display -->
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<!-- End Other page display -->
+
 			<?php
 			endif;
 
