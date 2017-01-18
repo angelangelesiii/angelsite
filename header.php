@@ -27,7 +27,7 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
 			<?php
-			if ( is_front_page() && is_home() ) : ?>
+			if ( is_front_page() || is_home() ) : ?>
 
 				<!-- Home page display -->
 				<!-- <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1> -->
@@ -40,14 +40,17 @@
 							<h2><?php echo bloginfo('description')?></h2>
 							<a href="#" class="btn-large">Know me better</a>
 						</div>
-						<nav id="site-nav" class="main-nav">
+						<nav id="site-nav" class="main-nav front-page">
 							<div class="nav-wrapper">
-								<a href="/" class="home-button">
+								<a href="<?php echo home_url(); ?>" class="home-button">
 									<img src="<?php echo get_template_directory_uri().'/img/logo/logotrans.png' ?>" alt="">
-									<!-- <img class="hoverlogo" src="<?php echo get_template_directory_uri().'/img/logo/logoopaque.png' ?>" alt=""> -->
+									<img class="hoverlogo" src="<?php echo get_template_directory_uri().'/img/logo/logotranshover.png' ?>" alt="">
 								</a>
 
-								<a href="http://www.zimitmedia.com" class="menu-btn-left"><img src="<?php echo get_template_directory_uri().'/img/logo/zimitlogo.png' ?>" alt="Zimit Media Team"></a>
+								<a href="http://www.zimitmedia.com" class="menu-btn-left">
+									<img class=" original" src="<?php echo get_template_directory_uri().'/img/logo/zimitlogo.png' ?>" alt="Zimit Media Team">
+									<img class="hover" src="<?php echo get_template_directory_uri().'/img/logo/zimitlogo-colored.png' ?>" alt="Zimit Media Team">
+								</a>
 
 								<a href="javascript:void(0)" class="menu-btn-right" id="menu-toggle-button"><i class="material-icons md-36" id="menu-button-main">menu</i></a>
 							</div>
@@ -60,11 +63,22 @@
 				<!-- End Home page display -->
 
 			<?php else : ?>
+				<nav id="site-nav" class="main-nav not-front-page">
+					<div class="nav-wrapper">
+						<a href="<?php echo home_url(); ?>" class="home-button">
+							<img src="<?php echo get_template_directory_uri().'/img/logo/logotrans.png' ?>" alt="">
+							<img class="hoverlogo" src="<?php echo get_template_directory_uri().'/img/logo/logotranshover.png' ?>" alt="">
+						</a>
 
-				<!-- Other page display -->
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<!-- End Other page display -->
+						<a href="http://www.zimitmedia.com" class="menu-btn-left"><img src="<?php echo get_template_directory_uri().'/img/logo/zimitlogo.png' ?>" alt="Zimit Media Team"></a>
 
+						<a href="javascript:void(0)" class="menu-btn-right" id="menu-toggle-button"><i class="material-icons md-36" id="menu-button-main">menu</i></a>
+					</div>
+
+					<!-- MENU MAIN -->
+					
+				</nav>
+				<div class="spacer"></div>
 			<?php endif; ?>
 
 		</div><!-- .site-branding -->
@@ -76,7 +90,7 @@
 				</div>
 			</div>
 		</nav><!-- #site-navigation -->
-		
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

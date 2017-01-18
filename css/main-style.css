@@ -2,6 +2,9 @@
 body {
 	font-family: 'Lato', sans-serif;
 }
+#masthead {
+	position: relative;
+}
 .menu-overlay {
 	position: fixed;
 	z-index: 11;
@@ -17,7 +20,7 @@ body {
 }
 .menu-overlay.menu-opened {
 	display: block;
-	background: rgba(0,0,0,0.4);
+	background: rgba(0,0,0,0.8);
 }
 /*menu-pane*/
 .menu-pane-container.opened {
@@ -41,9 +44,15 @@ body {
 	height: 100%;
 	width: 100%;
 	background: #FFFFFF;
+	border-left: 20px solid #FFC600;
+	padding: 20px 30px;
 	overflow-y: scroll;
 	left: 0;
 	top: 0;
+}
+#menu-pane::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
 }
 /*primary menu*/
 #primary-menu ul li {
@@ -86,7 +95,7 @@ body {
 	height: 150%;
 }
 #front-page-section .overlay {
-	background: rgba(0,0,0,0.6);
+	background: rgba(0,0,0,0.5);
 	position: absolute;
 	z-index: 2;
 	width: 100%;
@@ -126,18 +135,27 @@ body {
 	transition: all 0.2s ease;
 }
 #front-page-section a.btn-large:hover {
-	background: #FFFFFF;
+	border-color: #FFC600;
+	background: #FFC600;
 	color: #000000;
 }
-#front-page-section #site-nav {
+#site-nav.front-page {
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	width: 100%;
 	z-index: 1000;
-	background: rgba(0,0,0,0.2);
+	background: rgba(0,0,0,0.3);
 }
-#front-page-section .nav-wrapper {
+#site-nav.not-front-page {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+	background: #000000;
+}
+#site-nav .nav-wrapper {
 	margin: 0 auto;
 	padding: 30px 0;
 	height: 90px;
@@ -145,7 +163,10 @@ body {
 	max-width: 1200px;
 	position: relative;
 }
-#front-page-section .nav-wrapper a.home-button img {
+.spacer {
+	height: 90px;
+}
+#site-nav .nav-wrapper a.home-button img {
 	position: absolute;
 	bottom: 15px;
 	left: 50%;
@@ -156,17 +177,17 @@ body {
 	-o-transition: all .25s ease;
 	transition: all .25s ease;
 }
-#front-page-section .nav-wrapper a.home-button:link img.hoverlogo,
-#front-page-section .nav-wrapper a.home-button:visited img.hoverlogo {
+#site-nav .nav-wrapper a.home-button:link img.hoverlogo,
+#site-nav .nav-wrapper a.home-button:visited img.hoverlogo {
 	opacity: 0;
 	-webkit-transition: all .25s ease;
 	-o-transition: all .25s ease;
 	transition: all .25s ease;
 }
-#front-page-section .nav-wrapper a.home-button:hover img.hoverlogo {
+#site-nav .nav-wrapper a.home-button:hover img.hoverlogo {
 	opacity: 1;
 }
-#front-page-section .nav-wrapper a.menu-btn-left {
+#site-nav .nav-wrapper a.menu-btn-left {
 	position: absolute;
 	left: 15px;
 	bottom: 15px;
@@ -175,10 +196,25 @@ body {
 	-o-transition: all .25s ease;
 	transition: all .25s ease;
 }
-#front-page-section .nav-wrapper a.menu-btn-left img {
+#site-nav .nav-wrapper a.menu-btn-left img {
 	height: 48px;
+	-webkit-transition: all .25s ease;
+	-o-transition: all .25s ease;
+	transition: all .25s ease;
 }
-#front-page-section .nav-wrapper a.menu-btn-right {
+#site-nav .nav-wrapper a.menu-btn-left img.hover {
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+}
+#site-nav .nav-wrapper a.menu-btn-left:hover img.original {
+	opacity: 0;
+}
+#site-nav .nav-wrapper a.menu-btn-left:hover img.hover {
+	opacity: 1;
+}
+#site-nav .nav-wrapper a.menu-btn-right {
 	position: absolute;
 	right: 15px;
 	bottom: 15px;
@@ -186,13 +222,17 @@ body {
 	-webkit-transition: all .25s ease;
 	-o-transition: all .25s ease;
 	transition: all .25s ease;
-}
-#front-page-section .nav-wrapper a.menu-btn-right i{
 	color: #FFFFFF;
+}
+#site-nav .nav-wrapper a.menu-btn-right:hover {
+	color: #FFC600;
+}
+#site-nav .nav-wrapper a.menu-btn-right i{
+	
 	font-size: 3em;
 }
 /*nav scrolled*/
-#front-page-section #site-nav.scrolled {
+#site-nav.scrolled {
 	background: rgba(0,0,0,1);
 }
 
