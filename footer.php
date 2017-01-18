@@ -14,11 +14,14 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'angelangeles2' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'angelangeles2' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'angelangeles2' ), 'angelangeles2', '<a href="https://automattic.com/" rel="designer">Angel Angeles III</a>' ); ?>
-		</div><!-- .site-info -->
+		<div class="wrapper-big">
+			<div class="site-info">
+				<div class="footer-heading">
+					<p>Designed by:</p>
+					<h2>- Angel Angeles III -</h2>
+				</div>
+			</div><!-- .site-info -->
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

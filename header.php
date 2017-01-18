@@ -27,7 +27,7 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
 			<?php
-			if ( is_front_page() || is_home() ) : ?>
+			if ( is_front_page() ) : ?>
 
 				<!-- Home page display -->
 				<!-- <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1> -->
@@ -37,7 +37,8 @@
 					</div>
 					<div class="overlay">
 						<div class="container">
-							<h2><?php echo bloginfo('description')?></h2>
+							<h2>/i am ANGEL</h2>
+							<span class="subtext">Artist &nbsp;&nbsp;&bull;&nbsp;&nbsp; Web Developer and Designer &nbsp;&nbsp;&bull;&nbsp;&nbsp; Musician</span>
 							<a href="#" class="btn-large">Know me better</a>
 						</div>
 						<nav id="site-nav" class="main-nav front-page">
@@ -48,7 +49,7 @@
 								</a>
 
 								<a href="http://www.zimitmedia.com" class="menu-btn-left">
-									<img class=" original" src="<?php echo get_template_directory_uri().'/img/logo/zimitlogo.png' ?>" alt="Zimit Media Team">
+									<img class=" original"src="<?php echo get_template_directory_uri().'/img/logo/zimitlogo.png' ?>" alt="Zimit Media Team">
 									<img class="hover" src="<?php echo get_template_directory_uri().'/img/logo/zimitlogo-colored.png' ?>" alt="Zimit Media Team">
 								</a>
 
@@ -70,7 +71,10 @@
 							<img class="hoverlogo" src="<?php echo get_template_directory_uri().'/img/logo/logotranshover.png' ?>" alt="">
 						</a>
 
-						<a href="http://www.zimitmedia.com" class="menu-btn-left"><img src="<?php echo get_template_directory_uri().'/img/logo/zimitlogo.png' ?>" alt="Zimit Media Team"></a>
+						<a href="http://www.zimitmedia.com" class="menu-btn-left">
+							<img class=" original"src="<?php echo get_template_directory_uri().'/img/logo/zimitlogo.png' ?>" alt="Zimit Media Team">
+							<img class="hover" src="<?php echo get_template_directory_uri().'/img/logo/zimitlogo-colored.png' ?>" alt="Zimit Media Team">
+						</a>
 
 						<a href="javascript:void(0)" class="menu-btn-right" id="menu-toggle-button"><i class="material-icons md-36" id="menu-button-main">menu</i></a>
 					</div>
@@ -86,7 +90,26 @@
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<div class="menu-pane-container closed">
 				<div id="menu-pane">
-					<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
+					<section class="main-menu-side">
+						<div class="top-bar">
+							<i class="material-icons">close</i>
+						</div>
+
+						<!-- search -->
+						<form role="search" method="get" id="menusearchform" class="searchform" action="<?php echo home_url(); ?>">
+							<div>
+								<label class="screen-reader-text" for="s">Search for:</label>
+								<input type="text" value="" name="s" id="s" placeholder="Search anything..." />
+								<input type="submit" id="searchsubmit" value="Search" />
+							</div>
+						</form>
+
+						<!-- MENU -->
+						<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
+					</section>
+					<section class="sidebar">
+						<?php get_sidebar(); ?>
+					</section>
 				</div>
 			</div>
 		</nav><!-- #site-navigation -->

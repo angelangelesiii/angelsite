@@ -6,6 +6,10 @@
 
 // Document Ready
 jQuery(document).ready(function($){
+	// -----> STICKY FOOTER
+	var contentHeight = $(window).height() - ($('#site-nav').outerHeight() + $('footer.site-footer').outerHeight());
+	console.log(contentHeight);
+	$('.site-content').css('min-height', contentHeight+'px');
 
 	// -----> MENU TOGGLE
 	function menuToggle() {
