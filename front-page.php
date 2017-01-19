@@ -47,7 +47,7 @@ get_header(); ?>
 								<i class="fa fa-music" aria-hidden="true"></i>
 							</div>
 							<h2>Melodize</h2>
-							<p>I learned the guitar when I was 14 and now I'm creating music with my friends. I'm a producer by hobby and in my sleep. I use Presonus Studio One 3 Pro to make music.</p>
+							<p>I learned the guitar when I was 14 and now I'm creating music with my friends. I'm a producer by hobby and in my sleep. I use Presonus Studio One 3 Pro to make music</p>
 						</div>
 						<div class="column item large-3 small-6">
 							<div class="intro-icon">

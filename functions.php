@@ -136,6 +136,11 @@ function angelangeles2_scripts() {
 
 	wp_enqueue_script( 'page-script', get_template_directory_uri().'/js/angel.js', false, false, true);
 
+	// load only on home
+	if (is_front_page()) {
+		wp_enqueue_script( 'static-script', get_template_directory_uri().'/js/static.js', false, false, true);
+	}
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
