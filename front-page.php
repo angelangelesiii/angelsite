@@ -32,29 +32,29 @@ get_header(); ?>
 							<div class="intro-icon">
 								<i class="fa fa-paint-brush" aria-hidden="true"></i>
 							</div>
-							<h2>Lorem Ipsum</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique eaque impedit debitis!</p>
+							<h2>Design</h2>
+							<p>Art runs deep in the blood and it manifests in my works. I believe through simple yet focused design I can make UI/UX that simply works. I use Adobe Photoshop as my weapon of choice.</p>
 						</div>
 						<div class="column item large-3 small-6">
 							<div class="intro-icon">
 								<i class="fa fa-code" aria-hidden="true"></i>
 							</div>
-							<h2>Lorem Ipsum</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique eaque impedit debitis!</p>
+							<h2>Code</h2>
+							<p>Coding is what brought me to web design. I love building new things and coding enabled me to realize my imaginations with my design skills. Sublime Text 3 is my editor of choice.</p>
 						</div>
 						<div class="column item large-3 small-6">
 							<div class="intro-icon">
 								<i class="fa fa-music" aria-hidden="true"></i>
 							</div>
-							<h2>Lorem Ipsum</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique eaque impedit debitis!</p>
+							<h2>Melodize</h2>
+							<p>I learned the guitar when I was 14 and now I'm creating music with my friends. I'm a producer by hobby and in my sleep. I use Presonus Studio One 3 Pro to make music</p>
 						</div>
 						<div class="column item large-3 small-6">
 							<div class="intro-icon">
 								<i class="fa fa-gamepad" aria-hidden="true"></i>
 							</div>
-							<h2>Lorem Ipsum</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique eaque impedit debitis!</p>
+							<h2>Game</h2>
+							<p>I like playing games and it helped me develop my brain. Those improvements greatly helped me in my design, coding and English grammar. Let's play Heroes of the Storm someday.</p>
 						</div>
 					</div>
 				</div>
