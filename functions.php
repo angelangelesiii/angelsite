@@ -109,7 +109,13 @@ function angelangeles2_scripts() {
 
 	wp_enqueue_style( 'zurb-foundation', get_template_directory_uri().'/css/foundation.css');
 	wp_enqueue_style( 'main-style', get_template_directory_uri().'/css/main-style.css');
-	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Roboto+Slab:300,400,700');
+
+	// Load only on home
+	if (is_front_page()) {
+		wp_enqueue_style('static', get_template_directory_uri().'/css/static.css');
+	}
+
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Roboto+Slab:300,400,700');
 	wp_enqueue_style( 'google-material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons');
 	wp_enqueue_style( 'fontawesome', get_template_directory_uri().'/css/fa/css/font-awesome.min.css');
 
