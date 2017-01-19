@@ -33,7 +33,7 @@ get_header(); ?>
 								<i class="fa fa-paint-brush" aria-hidden="true"></i>
 							</div>
 							<h2>Design</h2>
-							<p>Art runs deep in the blood and it manifests in my works. I believe through simple yet focused design I can make UI/UX that simply works. I use Adobe Photoshop as my weapon of choice.</p>
+							<p>Art runs deep in the blood and it manifests in my works. I believe through simple yet focused design I can make UI/UX that simply works. I use Adobe Photoshop as my design weapon.</p>
 						</div>
 						<div class="column item large-3 small-6">
 							<div class="intro-icon">
@@ -47,7 +47,7 @@ get_header(); ?>
 								<i class="fa fa-music" aria-hidden="true"></i>
 							</div>
 							<h2>Melodize</h2>
-							<p>I learned the guitar when I was 14 and now I'm creating music with my friends. I'm a producer by hobby and in my sleep. I use Presonus Studio One 3 Pro to make music</p>
+							<p>I learned the guitar when I was 14 and now I'm creating music with my friends. I'm a producer by hobby and in my sleep. I use Presonus Studio One 3 Pro to make music.</p>
 						</div>
 						<div class="column item large-3 small-6">
 							<div class="intro-icon">
