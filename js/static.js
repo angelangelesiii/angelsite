@@ -13,8 +13,8 @@ jQuery(document).ready(function($){
 	var iconTL = new TimelineMax();
 
 	iconTL
-		// .staggerFrom('#introduction .intro-icon', 0.5, {y: 50, autoAlpha: 0, ease: Power2.easeOut}, 0.2, 'x')
-		.staggerFrom('#introduction .intro-icon i', 1, {y: '-250%', ease: Power3.easeOut}, 0.2);
+		.staggerFrom('#introduction .intro-icon', 0.5, {y: 50, autoAlpha: 0, ease: Power2.easeOut}, 0.2, 'x')
+		.staggerFrom('#introduction .intro-icon i', 1, {y: '-250%', ease: Power3.easeOut}, 0.2, '-=.5');
 
 	var iconStagger = new ScrollMagic.Scene({
 		triggerElement: '#introduction .icons',

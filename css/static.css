@@ -38,8 +38,10 @@
 	font-size: 80px;
 	position: absolute;
 	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	left: 0;
+	width: 100%;
+	text-align: center;
+	transform: translateY(-50%);
 	color: #4B4B4B;
 }
 .front-page #introduction .item  h2 {
