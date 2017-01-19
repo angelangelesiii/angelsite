@@ -31,6 +31,9 @@ jQuery(document).ready(function($){
 	$('.menu-overlay').click(function(){
 		menuToggle();
 	});
+	$('#menu-pane .top-bar i').click(function(){
+		menuToggle();
+	});
 
 	// -----> ANIMATIONS
 	// ScrollMagic initialization

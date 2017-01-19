@@ -11,6 +11,13 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+		<?php 
+		if ( has_post_thumbnail() ) {
+			echo "<a href=\"".esc_url(get_permalink())."\">";
+			the_post_thumbnail();
+			echo "</a>";
+		} 
+		?>
 		<?php
 		if ( is_single() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -28,6 +35,7 @@
 
 	<div class="entry-content">
 		<?php
+		if ( is_single() ) {
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
 				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'angelangeles2' ), array( 'span' => array( 'class' => array() ) ) ),
@@ -38,6 +46,18 @@
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'angelangeles2' ),
 				'after'  => '</div>',
 			) );
+		} else {
+			the_excerpt( sprintf(
+				/* translators: %s: Name of current post. */
+				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'angelangeles2' ), array( 'span' => array( 'class' => array() ) ) ),
+				the_title( '<span class="screen-reader-text">"', '"</span>', false )
+			) );
+
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'angelangeles2' ),
+				'after'  => '</div>',
+			) );
+		}
 		?>
 	</div><!-- .entry-content -->
 

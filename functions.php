@@ -111,6 +111,7 @@ function angelangeles2_scripts() {
 	wp_enqueue_style( 'main-style', get_template_directory_uri().'/css/main-style.css');
 	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Roboto+Slab:300,400,700');
 	wp_enqueue_style( 'google-material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons');
+	wp_enqueue_style( 'fontawesome', get_template_directory_uri().'/css/fa/css/font-awesome.min.css');
 
 
 	wp_enqueue_script('jquery');
@@ -159,3 +160,16 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+
+// USER ADDED FUNCTIONS
+
+// Change "..." to "Read More"
+
+function new_excerpt_more($more) {
+    global $post;
+    return '... <br/><a class="moretag" href="'. get_permalink($post->ID) . '">continue reading</a>'; //Change to suit your needs
+}
+ 
+add_filter( 'excerpt_more', 'new_excerpt_more' );
