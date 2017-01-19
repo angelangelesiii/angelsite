@@ -320,7 +320,7 @@ footer.site-footer .footer-heading p.copyright {
 	left: 0;
 	width: 100%;
 	z-index: 1000;
-	background: rgba(0,0,0,0.3);
+	background: rgba(0,0,0,0.2);
 }
 #site-nav.not-front-page {
 	position: fixed;
@@ -333,20 +333,20 @@ footer.site-footer .footer-heading p.copyright {
 #site-nav .nav-wrapper {
 	margin: 0 auto;
 	padding: 30px 0;
-	height: 90px;
+	height: 50px;
 	width: 100%;
 	max-width: 1280px;
 	position: relative;
 }
 .spacer {
-	height: 90px;
+	height: 50px;
 }
 #site-nav .nav-wrapper a.home-button img {
 	position: absolute;
-	bottom: 15px;
+	bottom: 7.5px;
 	left: 50%;
 	transform: translateX(-50%);
-	height: 60px;
+	height: 45px;
 	width: auto;
 	-webkit-transition: all .25s ease;
 	-o-transition: all .25s ease;
@@ -365,14 +365,15 @@ footer.site-footer .footer-heading p.copyright {
 #site-nav .nav-wrapper a.menu-btn-left {
 	position: absolute;
 	left: 15px;
-	bottom: 15px;
+	bottom: 7.5px;
 	display: block;
 	-webkit-transition: all .25s ease;
 	-o-transition: all .25s ease;
 	transition: all .25s ease;
 }
 #site-nav .nav-wrapper a.menu-btn-left img {
-	height: 48px;
+	height: 45px;
+	display: block;
 	-webkit-transition: all .25s ease;
 	-o-transition: all .25s ease;
 	transition: all .25s ease;
@@ -392,19 +393,20 @@ footer.site-footer .footer-heading p.copyright {
 #site-nav .nav-wrapper a.menu-btn-right {
 	position: absolute;
 	right: 15px;
-	bottom: 15px;
+	bottom: 9px;
 	display: block;
 	-webkit-transition: all .25s ease;
 	-o-transition: all .25s ease;
 	transition: all .25s ease;
 	color: #FFFFFF;
+	text-decoration: none;
 }
 #site-nav .nav-wrapper a.menu-btn-right:hover {
 	color: #FFC600;
 }
 #site-nav .nav-wrapper a.menu-btn-right i{
-	
-	font-size: 3em;
+	display: block;
+	font-size: 2.5em;
 }
 /*nav scrolled*/
 #site-nav.scrolled {
