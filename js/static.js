@@ -19,11 +19,23 @@ jQuery(document).ready(function($){
 	var iconStagger = new ScrollMagic.Scene({
 		triggerElement: '#introduction .icons',
 		triggerHook: 1,
-		offset: 150,
-		reverse: false
+		offset: 150
 	})
 	.setTween(iconTL)
-	.addIndicators()
+	// .addIndicators()
 	.addTo(static);
 
+	// WORKS INTO SCENE
+	var worksTransition = new ScrollMagic.Scene({
+		triggerElement: '#workshook',
+		triggerHook: 1,
+		offset: 300
+	})
+	.setTween(TweenMax.staggerFrom('#works .posts .thumbnail',1,{
+		autoAlpha: 0,
+		y: 200,
+		ease: Power4.easeOut
+	}, 0.25))
+	.addIndicators()
+	.addTo(static);
 });

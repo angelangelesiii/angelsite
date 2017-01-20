@@ -46,7 +46,7 @@ get_header(); ?>
 								<?php 
 								if ( has_post_thumbnail() ) { ?>
 									<a href="<?php the_permalink(); ?>">
-										<div class="thumbnail" style="background: url('<?php echo the_post_thumbnail_url() ?>')">
+										<div class="thumbnail" style="background: url('<?php echo the_post_thumbnail_url('large') ?>')">
 										</div>
 									</a>
 								<?php } else { ?>	
@@ -80,7 +80,7 @@ get_header(); ?>
 					get_template_part( 'template-parts/content', 'none' );
 				
 				endif; ?>
-				.divider
+				<div class="divider"></div>
 			</div>
 
 		</main><!-- #main -->

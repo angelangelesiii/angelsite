@@ -19,6 +19,7 @@ get_header(); ?>
 		
 		<!-- This is a static home page -->
 		<div class="front-page">
+
 			<section id="introduction">
 				<div class="wrapper">
 					<h1 class="catch-text">Complex stuff simplified</h1>
@@ -59,6 +60,55 @@ get_header(); ?>
 					</div>
 				</div>
 			</section>
+
+			<section id="works">
+				<div class="wrapper-big">
+					<h1 class="section-title">Latest Works</h1>
+					<div id="workshook"></div>
+					<div class="posts row small-up-2 large-up-3 collapse">
+						<?php 
+						wp_reset_postdata();
+						$worksArray = array(
+							'post_type'				=> 'post',
+							'posts_per_page'		=> '6',
+							'ignore_sticky_posts'	=> true
+
+							);
+						$worksQuery = new WP_Query($worksArray);
+						if ($worksQuery->have_posts()) {
+
+							while ($worksQuery->have_posts()) {
+								$worksQuery->the_post();
+						?>
+						
+						
+						<div class="card column column-block">
+							<a href="<?php the_permalink(); ?>">
+							<?php if(has_post_thumbnail()) { ?>
+								<div class="thumbnail have-thumbnail" style="background: url('<?php echo the_post_thumbnail_url('large') ?>')">
+							<?php } else { ?>
+								<div class="thumbnail no-thumbnail" style="background: url('<?php echo get_template_directory_uri().'/img/bg/logothumb.png' ?>')">
+							<?php } ?>
+									<div class="content">
+										<h2><?php the_title(); ?></h2>
+									</div>
+								</div>
+							</a>
+						</div>
+						
+
+						<?php
+							}
+
+						} else {
+							// FALLBACK
+						}
+						wp_reset_postdata();
+						?>
+					</div>
+				</div>
+			</section>
+
 		</div>
 
 		</main><!-- #main -->
