@@ -36,6 +36,6 @@ jQuery(document).ready(function($){
 		y: 200,
 		ease: Power4.easeOut
 	}, 0.25))
-	.addIndicators()
+	// .addIndicators()
 	.addTo(static);
 });
