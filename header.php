@@ -37,9 +37,9 @@
 					</div>
 					<div class="overlay">
 						<div class="container">
-							<h2>/i am ANGEL</h2>
+							<h2><span style="color: #FFC600">/</span>i am ANGEL</h2>
 							<span class="subtext">Artist &nbsp;&nbsp;&bull;&nbsp;&nbsp; Web Developer and Designer &nbsp;&nbsp;&bull;&nbsp;&nbsp; Musician</span>
-							<a href="#" class="btn-large">Know me better</a>
+							<a href="javascript:void(0)" class="btn-large" id="intro-btn">Know me better</a>
 						</div>
 						<nav id="site-nav" class="main-nav front-page">
 							<div class="nav-wrapper">

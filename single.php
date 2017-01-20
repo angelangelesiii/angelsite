@@ -26,17 +26,21 @@ get_header(); ?>
 					<div class="wrapper">
 						<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="back">&lsaquo; Back to blog posts</a>
 				<?php } ?>
-						<h1><?php echo the_title(); ?></h1>
+						<h1><?php echo the_title(); ?><?php edit_post_link('<i class="fa fa-pencil edit-button" aria-hidden="true"></i>'); ?></h1>
+
 					</div>
 				</header>
 				<div class="wrapper">
 					<div class="the-content">
 						<?php the_content(); ?>
 					</div>
+					<div class="divider"></div>
 				
 				
-				
-				<?php 
+				<?php the_category(', ') ?>
+				<?php angelangeles2_posted_on(); ?>
+				<?php
+
 					the_post_navigation();
 				
 					// If comments are open or we have at least one comment, load up the comment template.
@@ -50,8 +54,11 @@ get_header(); ?>
 				</div>
 			</section>
 
+
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
+
 
 <?php
 get_sidebar();

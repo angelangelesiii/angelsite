@@ -40,7 +40,7 @@ get_header(); ?>
 					while ( have_posts() ) : the_post();
 					?>
 				
-						<article id="post-<?php the_ID(); ?>" class="<?php echo join( ' ', get_post_class()) ?> clearfix">
+						<article id="post-<?php the_ID(); ?>" class="<?php echo join( ' ', get_post_class()) ?> clearfix post-item">
 
 							<div class="archive-thumbnail-container">
 								<?php 

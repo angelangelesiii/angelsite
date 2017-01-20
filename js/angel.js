@@ -1,7 +1,11 @@
 // Angel.js
 // By Angel Angeles III
 
+hljs.initHighlightingOnLoad();
+
 //Jquery Dollar Sign for WP
+
+
 (function($) {})( jQuery );
 
 // Document Ready

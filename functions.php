@@ -128,11 +128,18 @@ function angelangeles2_scripts() {
 
 	wp_enqueue_script( 'GSAP', 'http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js', false, false, true);
 
+	// load only on home
+	if (is_front_page()) {
+		wp_enqueue_script( 'scrollmagic-scrollto', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ScrollToPlugin.min.js', false, false, true);
+	}
+
 	wp_enqueue_script( 'scrollmagic-main', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js', false, false, true);
 
 	wp_enqueue_script( 'scrollmagic-gsap', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js', false, false, true);
 
 	wp_enqueue_script( 'scrollmagic-indicators', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js', false, false, true);
+
+	wp_enqueue_script( 'code-highlighter', '//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js', false, false, true);
 
 	wp_enqueue_script( 'page-script', get_template_directory_uri().'/js/angel.js', false, false, true);
 
@@ -180,7 +187,7 @@ require get_template_directory() . '/inc/jetpack.php';
 
 function new_excerpt_more($more) {
     global $post;
-    return '... <br/><a class="moretag" href="'. get_permalink($post->ID) . '">continue reading</a>'; //Change to suit your needs
+    return '... <a class="moretag" href="'. get_permalink($post->ID) . '">continue reading</a>'; //Change to suit your needs
 }
  
 add_filter( 'excerpt_more', 'new_excerpt_more' );

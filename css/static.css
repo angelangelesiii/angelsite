@@ -129,7 +129,7 @@ h1.section-title {
 	z-index: 2
 }
 
-#works .card:hover .content {
+#works .card a.thumbnail-link:hover .content {
 	top: 0;
 	left: 0;
 	-webkit-box-shadow: 5px 0 100px rgba(0,0,0,0.5);

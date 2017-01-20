@@ -305,9 +305,9 @@ footer.site-footer .footer-heading p.copyright {
 	border: 2px solid #FFFFFF;
 	margin: 50px 0 0;
 	display: inline-block;
-	-webkit-transition: all 0.2s ease;
+/*	-webkit-transition: all 0.2s ease;
 	-o-transition: all 0.2s ease;
-	transition: all 0.2s ease;
+	transition: all 0.2s ease;*/
 }
 #front-page-section a.btn-large:hover {
 	border-color: #FFC600;
@@ -427,36 +427,46 @@ h2.blogtitle {
 	background: #646464;
 	margin: 20px auto;
 }
-article.post .archive-thumbnail-container {
+article.sticky {
+	padding: 15px;
+	border-radius: 3px;
+	background: #FDF5DB;
+	border: 0.5px solid #ECE8DF;
+	-webkit-box-shadow: 0 1.5px 0 rgba(0,0,0,0.075);
+	box-shadow: 0 1.5px 0 rgba(0,0,0,0.075);
+	margin-bottom: 27px;
+}
+article.post-item .archive-thumbnail-container {
 	float: left;
 	width: 35%;
 }
-article.post .archive-article-container {
+article.post-item .archive-article-container {
 	float: right;
 	width: 65%;
 	padding-left: 20px;
+	position: relative;
 }
-article.post.clearfix {
+article.post-item.clearfix {
 	overflow: auto;
 	zoom: 1;
 }
-article.post .archive-thumbnail-container .thumbnail {
+article.post-item .archive-thumbnail-container .thumbnail {
 	background-size: cover !important;
 	background-position: center center !important;
 	background-repeat: no-repeat !important;
 	width: 100%;
 	padding-bottom: 75%;
 }
-article.post .archive-thumbnail-container .thumbnail.no-thumbnail {
+article.post-item .archive-thumbnail-container .thumbnail.no-thumbnail {
 	overflow: hidden;
 	position: relative;
 }
-article.post .archive-thumbnail-container .thumbnail.no-thumbnail .invisible-container {
+article.post-item .archive-thumbnail-container .thumbnail.no-thumbnail .invisible-container {
 	position: absolute;
 	width: 100%;
 	height: 100%;
 }
-article.post .archive-thumbnail-container .thumbnail.no-thumbnail .thumbnail-text {
+article.post-item .archive-thumbnail-container .thumbnail.no-thumbnail .thumbnail-text {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -469,46 +479,52 @@ article.post .archive-thumbnail-container .thumbnail.no-thumbnail .thumbnail-tex
 	text-decoration: none;
 	line-height: 1em;
 }
-article.post:nth-child(odd) .archive-thumbnail-container .thumbnail.no-thumbnail {
+article.post-item:nth-child(odd) .archive-thumbnail-container .thumbnail.no-thumbnail {
 	background: #434343;
 }
-article.post:nth-child(odd) .archive-thumbnail-container .thumbnail.no-thumbnail .thumbnail-text{
+article.post-item:nth-child(odd) .archive-thumbnail-container .thumbnail.no-thumbnail .thumbnail-text{
 	color: #FFC600;
 }
-article.post:nth-child(even) .archive-thumbnail-container .thumbnail.no-thumbnail {
+article.post-item:nth-child(even) .archive-thumbnail-container .thumbnail.no-thumbnail {
 	background: #FFC600;
 }
-article.post:nth-child(even) .archive-thumbnail-container .thumbnail.no-thumbnail .thumbnail-text{
+article.post-item:nth-child(even) .archive-thumbnail-container .thumbnail.no-thumbnail .thumbnail-text{
 	color: #434343;
 }
-article.post .archive-article-container a {
+article.post-item .archive-article-container a {
 	text-decoration: none;
 }
-article.post .archive-article-container a h2 {
+article.post-item .archive-article-container a h2 {
 	margin: 0;
 	font-family: 'Roboto Slab', serif;
 	text-decoration: none;
-	color: #000000;
+	color: #434343;
 	font-weight: 400;
 	font-size: 2em;
+	-webkit-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
 }
-article.post .archive-article-container a h2::after {
+article.post-item .archive-article-container a h2:hover {
+	color: #A0A0A0;
+}
+article.post-item .archive-article-container a h2::after {
 	content: '';
 	display: block;
 	width: 100%;
 	height: 2px;
 	background: #FFC600;
 }
-article.post .archive-article-container p {
+article.post-item .archive-article-container p {
 	margin: 0;
 	line-height: 1.5em;
 }
-article.post .archive-article-container .entry-content {
+article.post-item .archive-article-container .entry-content {
 	margin: 20px 0;
 }
-article.post .archive-article-container a.moretag {
-	background: #FFC600;
-	color: #444444;
+article.post-item .archive-article-container a.moretag {
+	color: #7C6000;
+	text-decoration: underline;
 	text-transform: uppercase;
 	font-size: 0.7em;
 	padding: 2px 4px;
@@ -516,7 +532,7 @@ article.post .archive-article-container a.moretag {
 	-o-transition: all 0.25s ease;
 	transition: all 0.25s ease;
 }
-article.post .archive-article-container a.moretag:hover {
+article.post-item .archive-article-container a.moretag:hover {
 	background: #FFDF72;
 }
 
@@ -568,3 +584,100 @@ article.post .archive-article-container a.moretag:hover {
 	text-shadow: 0 1px 3px #000;
 }
 
+
+/*SINGLE*/
+section.single-post-page .the-content a:link,
+section.single-post-page .the-content a:visited {
+	text-decoration: none;
+	color: #997E22;
+	border-bottom: dotted 1px #997E22;
+}
+section.single-post-page a:hover {
+	color: #745A00;
+	border-bottom: dotted 1px #745A00;
+}
+section.single-post-page h1,
+section.single-post-page h2,
+section.single-post-page h3,
+section.single-post-page h4,
+section.single-post-page h5,
+section.single-post-page h6 {
+	font-weight: 900;
+}
+section.single-post-page h1 {
+	font-size: 3em;
+}
+section.single-post-page h2 {
+	font-size: 2.5em;
+}
+section.single-post-page h3 {
+	font-size: 2.1em;
+}
+section.single-post-page h4 {
+	font-size: 1.7em;
+}
+section.single-post-page h5 {
+	font-size: 1.3em;
+}
+section.single-post-page h6 {
+	font-size: 0.9em;
+}
+section.single-post-page p {
+	color: #5D5D5D;
+	font-size: 1.1em;
+	line-height: 1.8em;
+}
+section.single-post-page blockquote {
+	background: #F2F2F2;
+	border-radius: 4px;
+	margin: 20px 30px;
+	padding: 20px;
+	font-size: 1em;
+}
+section.single-post-page blockquote p {
+	margin: 0;
+	font-size: 1em;
+}
+section.single-post-page table thead {
+	background: #000000;
+	color: #E5E5E5;
+}
+section.single-post-page table th,
+section.single-post-page table td {
+	padding: 7px 5px
+}
+section.single-post-page table tbody tr:nth-child(even) {
+	background: #FFF7D8;
+}
+section.single-post-page table tbody tr:nth-child(odd) {
+	background: #FFFFFF;
+}
+section.single-post-page ul,
+section.single-post-page ol {
+	margin-left: 0;
+}
+section.single-post-page ul {
+	list-style-type: square;
+}
+section.single-post-page code {
+	display: inline-block;
+	padding: 0px 5px;
+	background: #F1F1F1;
+	border-radius: 3px;
+}
+section.single-post-page .edit-button {
+	vertical-align: super;
+	font-size: .5em;
+	padding-left: 5px;
+	color: #FFC600;
+	border-bottom: none !important;
+}
+section.single-post-page .edit-button:hover {
+	color: #FFE99B;
+}
+section.single-post-page figure {
+	margin-bottom: 2em;
+}
+section.single-post-page figcaption {
+	font-size: 0.8em;
+}

@@ -88,7 +88,7 @@ get_header(); ?>
 						
 						
 						<div class="card column column-block">
-							<a href="<?php the_permalink(); ?>">
+							<a class="thumbnail-link" href="<?php the_permalink(); ?>">
 							<?php if(has_post_thumbnail()) { ?>
 								<div class="thumbnail have-thumbnail" style="background: url('<?php echo the_post_thumbnail_url('large') ?>')">
 							<?php } else { ?>

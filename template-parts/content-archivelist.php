@@ -9,59 +9,33 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+<article id="post-<?php the_ID(); ?>" class="<?php echo join( ' ', get_post_class()) ?> clearfix post-item">
+
+	<div class="archive-thumbnail-container">
 		<?php 
-		if ( has_post_thumbnail() ) {
-			echo "<a href=\"".esc_url(get_permalink())."\">";
-			the_post_thumbnail();
-			echo "</a>";
-		} 
-		?>
-		<?php
-		if ( is_single() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+		if ( has_post_thumbnail() ) { ?>
+			<a href="<?php the_permalink(); ?>">
+				<div class="thumbnail" style="background: url('<?php echo the_post_thumbnail_url('large') ?>')">
+				</div>
+			</a>
+		<?php } else { ?>	
+			<a href="<?php the_permalink(); ?>">
+				<div class="thumbnail no-thumbnail">
+					<span class="thumbnail-text"><?php echo the_title(); ?></span>
+					<div class="invisible-cover"></div>
+				</div>
+			</a>
+		<?php } ?>
+	</div>
 
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php angelangeles2_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
-	</header><!-- .entry-header -->
+	<div class="archive-article-container">
+		<header class="entry-header">
+			<a href="<?php echo the_permalink(); ?>"><h2><?php echo the_title(); ?></h2></a>
 
-	<div class="entry-content">
-		<?php
-		if ( is_single() ) {
-			the_content( sprintf(
-				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'angelangeles2' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
+		</header>
+		<div class="entry-content">
+			<?php the_excerpt(); ?>
+		</div>
+	</div>
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'angelangeles2' ),
-				'after'  => '</div>',
-			) );
-		} else {
-			the_excerpt( sprintf(
-				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'angelangeles2' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
-
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'angelangeles2' ),
-				'after'  => '</div>',
-			) );
-		}
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php angelangeles2_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+</article>
