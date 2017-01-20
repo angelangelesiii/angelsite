@@ -39,7 +39,16 @@
 						<div class="container">
 							<h2><span style="color: #FFC600">/</span>i am ANGEL</h2>
 							<span class="subtext">Artist &nbsp;&nbsp;&bull;&nbsp;&nbsp; Web Developer and Designer &nbsp;&nbsp;&bull;&nbsp;&nbsp; Musician</span>
-							<a href="javascript:void(0)" class="btn-large" id="intro-btn">Know me better</a>
+							<a href="javascript:void(0)" class="btn-large" id="intro-btn">
+								<div class="cube">
+									<div class="original-face">
+										<span>Know more</span>
+									</div>
+									<div class="hover-face">
+										<span>Let's go!</span>
+									</div>
+								</div>
+							</a>
 						</div>
 						<nav id="site-nav" class="main-nav front-page">
 							<div class="nav-wrapper">

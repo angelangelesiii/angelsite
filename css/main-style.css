@@ -239,7 +239,7 @@ footer.site-footer .footer-heading p.copyright {
 	background-repeat: no-repeat;
 	position: relative;
 	z-index: 10;
-	/*overflow: hidden;*/
+	overflow: hidden;
 }
 #front-page-section .parallax-container {
 	background: #000000;
@@ -293,7 +293,7 @@ footer.site-footer .footer-heading p.copyright {
 	font-size: 0.75em;
 	letter-spacing: 0.2em;
 }
-#front-page-section a.btn-large:link,
+/*#front-page-section a.btn-large:link,
 #front-page-section a.btn-large:visited {
 	color: #FFFFFF;
 	text-decoration: none;
@@ -305,15 +305,63 @@ footer.site-footer .footer-heading p.copyright {
 	border: 2px solid #FFFFFF;
 	margin: 50px 0 0;
 	display: inline-block;
-/*	-webkit-transition: all 0.2s ease;
-	-o-transition: all 0.2s ease;
-	transition: all 0.2s ease;*/
 }
 #front-page-section a.btn-large:hover {
 	border-color: #FFC600;
 	background: #FFC600;
 	color: #000000;
+}*/
+#front-page-section .container a.btn-large {
+	text-decoration: none;
+	color: ;
 }
+#front-page-section .container .cube {
+	margin: 40px auto 0;
+	width: 260px;
+	height: 55px;
+	/*border: 2px solid #FFFFFF;*/
+	text-align: center;
+	-webkit-transition: transform 0.25s ease;
+	-o-transition: transform 0.25s ease;
+	transition: transform 0.25s ease;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+#front-page-section .container .cube .original-face,
+#front-page-section .container .cube .hover-face {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 0.9em;
+	font-weight: 700;
+	letter-spacing: 0.2em;
+	padding: 10px 0;
+}
+#front-page-section .container .cube .original-face {
+	color: #FFFFFF;
+	border: 2px solid #FFFFFF;
+	-webkit-transform: translateZ(22px);
+	-ms-transform: translateZ(22px);
+	-o-transform: translateZ(22px);
+	transform: translateZ(22px);
+}
+#front-page-section .container .cube .hover-face {
+	background: #FFC600;
+	border: 2px solid #FFC600;
+	color: #000000;
+	-webkit-transform: rotateX(-90deg) translateZ(-22px);
+	-ms-transform: rotateX(-90deg) translateZ(-22px);
+	-o-transform: rotateX(-90deg) translateZ(-22px);
+	transform: rotateX(-90deg) translateZ(-22px);
+}
+#front-page-section .container .cube:hover {
+	-webkit-transform: rotateX(89deg);
+	-ms-transform: rotateX(89deg);
+	-o-transform: rotateX(89deg);
+	transform: rotateX(89deg);
+}
+
 #site-nav.front-page {
 	position: absolute;
 	bottom: 0;
