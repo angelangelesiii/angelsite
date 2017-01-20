@@ -24,6 +24,7 @@
 .front-page #introduction .item {
 	position: relative;
 }
+
 .front-page #introduction .intro-icon {
 	position: absolute;
 	width: 170px;
@@ -34,15 +35,40 @@
 	transform: translateX(-50%);
 	overflow: hidden;
 }
+.front-page #introduction .intro-icon .yellow-hover {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 2;
+	top: 100%;
+	left: 0;
+	border: 3px solid #FFC600;
+	background: #FFC600;
+	-webkit-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+.front-page #introduction .intro-icon:hover .yellow-hover {
+	top: 0;
+	left: 0;
+}
 .front-page #introduction .intro-icon i {
 	font-size: 80px;
 	position: absolute;
 	top: 50%;
 	left: 0;
 	width: 100%;
+	padding-bottom: 2%;
 	text-align: center;
 	transform: translateY(-50%);
 	color: #4B4B4B;
+	z-index: 3;
+	-webkit-transition: all 0.1s ease;
+	-o-transition: all 0.1s ease;
+	transition: all 0.1s ease;
+}
+.front-page #introduction .intro-icon:hover i {
+	color: #FFFFFF;
 }
 .front-page #introduction .item  h2 {
 	margin: 190px 0 0;
@@ -60,7 +86,7 @@
 /*WORKS*/
 #works {
 	background: #EDEDED;
-	padding: 80px 0;
+	padding: 80px 0 150px;
 }
 h1.section-title {
 	font-family: 'Roboto', 'Lato', sans-serif;
@@ -82,7 +108,7 @@ h1.section-title {
 	border: 5px solid #FFFFFF;
 	border-radius: 3px;
 	-webkit-box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-	box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+	box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 	overflow: hidden;
 	position: relative;
 }
@@ -102,6 +128,7 @@ h1.section-title {
 	transition: all 0.4s ease;
 	z-index: 2
 }
+
 #works .card:hover .content {
 	top: 0;
 	left: 0;
@@ -115,7 +142,8 @@ h1.section-title {
 	text-align: center;
 	top: 50%;
 	font-family: 'Roboto Slab', serif;
-	font-size: 2.2em;
+	font-size: 1.5em;
+	font-weight: 300;
 	transform: translateY(-50%);
 	margin: 0;
 	padding: 20px;

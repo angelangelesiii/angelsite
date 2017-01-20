@@ -31,11 +31,11 @@ jQuery(document).ready(function($){
 		triggerHook: 1,
 		offset: 300
 	})
-	.setTween(TweenMax.staggerFrom('#works .posts .thumbnail',1,{
+	.setTween(TweenMax.staggerFrom('#works .posts .thumbnail', 1.25, {
 		autoAlpha: 0,
 		y: 200,
-		ease: Power4.easeOut
+		ease: Power3.easeOut
 	}, 0.25))
-	// .addIndicators()
+	.addIndicators()
 	.addTo(static);
 });

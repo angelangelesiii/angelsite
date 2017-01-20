@@ -31,6 +31,7 @@ get_header(); ?>
 					<div class="row icons">
 						<div class="column item large-3 small-6">
 							<div class="intro-icon">
+								<div class="yellow-hover"></div>
 								<i class="fa fa-paint-brush" aria-hidden="true"></i>
 							</div>
 							<h2>Design</h2>
@@ -38,6 +39,7 @@ get_header(); ?>
 						</div>
 						<div class="column item large-3 small-6">
 							<div class="intro-icon">
+								<div class="yellow-hover"></div>
 								<i class="fa fa-code" aria-hidden="true"></i>
 							</div>
 							<h2>Code</h2>
@@ -45,6 +47,7 @@ get_header(); ?>
 						</div>
 						<div class="column item large-3 small-6">
 							<div class="intro-icon">
+								<div class="yellow-hover"></div>
 								<i class="fa fa-music" aria-hidden="true"></i>
 							</div>
 							<h2>Melodize</h2>
@@ -52,6 +55,7 @@ get_header(); ?>
 						</div>
 						<div class="column item large-3 small-6">
 							<div class="intro-icon">
+								<div class="yellow-hover"></div>
 								<i class="fa fa-gamepad" aria-hidden="true"></i>
 							</div>
 							<h2>Game</h2>
@@ -69,6 +73,7 @@ get_header(); ?>
 						<?php 
 						wp_reset_postdata();
 						$worksArray = array(
+							'category_name'			=> 'works',
 							'post_type'				=> 'post',
 							'posts_per_page'		=> '6',
 							'ignore_sticky_posts'	=> true
