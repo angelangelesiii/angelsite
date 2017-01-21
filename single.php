@@ -37,8 +37,11 @@ get_header(); ?>
 					<div class="divider"></div>
 				
 				
-				<?php the_category(', ') ?>
-				<?php angelangeles2_posted_on(); ?>
+				<div class="post-meta-custom">
+					<?php angelangeles2_posted_on(); ?><br/>
+					Category: <?php the_category(', ') ?>
+				</div>
+
 				<?php
 
 					the_post_navigation();

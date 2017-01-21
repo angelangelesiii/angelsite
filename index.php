@@ -19,11 +19,13 @@ get_header(); ?>
 
 		<div class="wrapper">
 			<?php 
-			if ( is_home() ) {
-				echo "<h2 class=\"blogtitle\">- Blog -</h2>";
-				echo "<div class=\"divider\"></div>";
-			}
-			?>
+			if ( is_home() ) { ?>
+				<div class="blog-header">
+					<p>Angel Angeles III's</p>
+					<h2 class="blogtitle">- Blog -</h2>
+					<div class="divider"></div>
+				</div>
+			<?php }	?>
 			<div style="height: 40px;"></div>
 			<?php
 				if ( have_posts() ) :
@@ -80,7 +82,6 @@ get_header(); ?>
 					get_template_part( 'template-parts/content', 'none' );
 				
 				endif; ?>
-				<div class="divider"></div>
 			</div>
 
 		</main><!-- #main -->

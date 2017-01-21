@@ -50,16 +50,17 @@ jQuery(document).ready(function($){
 	.addTo(static);
 
 	// WORKS INTO SCENE
+	var worksTL = new TimelineMax();
+	worksTL 
+		.staggerFrom('#works .posts .thumbnail', 1.25, {autoAlpha: 0, y: 200, ease: Power3.easeOut}, 0.25)
+		.from('#works a.btn', 1, {autoAlpha: 0, ease: Power2.easeOut}, '-=0.5');
+
 	var worksTransition = new ScrollMagic.Scene({
 		triggerElement: '#workshook',
 		triggerHook: 1,
 		offset: 300
 	})
-	.setTween(TweenMax.staggerFrom('#works .posts .thumbnail', 1.25, {
-		autoAlpha: 0,
-		y: 200,
-		ease: Power3.easeOut
-	}, 0.25))
+	.setTween(worksTL)
 	// .addIndicators()
 	.addTo(static);
 });

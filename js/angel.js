@@ -14,6 +14,7 @@ jQuery(document).ready(function($){
 	var contentHeight = $(window).height() - ($('#site-nav').outerHeight() + $('footer.site-footer').outerHeight());
 	console.log(contentHeight);
 	$('.site-content').css('min-height', contentHeight+'px');
+	$('.nav-spacer').css('min-height', $('#site-nav').outerHeight()+'px');
 
 	// -----> MENU TOGGLE
 	function menuToggle() {

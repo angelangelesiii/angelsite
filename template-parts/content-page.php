@@ -14,7 +14,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-content the-content">
 		<?php
 			the_content();
 
@@ -24,6 +24,8 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
+
+	<div class="divider"></div>
 
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">

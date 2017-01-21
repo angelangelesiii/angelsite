@@ -91,7 +91,7 @@
 					<!-- MENU MAIN -->
 					
 				</nav>
-				<div class="spacer"></div>
+				<div class="nav-spacer"></div>
 			<?php endif; ?>
 
 		</div><!-- .site-branding -->
