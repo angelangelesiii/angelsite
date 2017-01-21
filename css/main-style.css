@@ -910,3 +910,112 @@ h4.comments-title {
 	margin-top: 50px;
 	margin-bottom: 70px;
 }
+
+
+/*
+	MEDIA QUERIES
+*/
+
+
+/*
+SMALL ONLY <640px
+*/
+@media screen and (max-width: 39.9375em) {
+	a.btn:link, a.btn:visited {
+		padding: 5px 20px !important;
+		font-size: 0.8em;
+	}
+	#front-page-section .parallax-bg {
+		background-position: center center;
+	}
+	#front-page-section .overlay .container h2 {
+		font-size: 2.5em;
+	}
+	#front-page-section .overlay .container .subtext {
+		font-size: 0.6em;
+	}
+
+	/*INTRODUCTION*/
+	.front-page #introduction {
+		padding: 30px 0 !important;
+	}
+	.front-page #introduction h1.catch-text {
+		font-size: 3em !important;
+		margin: 20px 0;
+	}
+	.front-page #introduction p.intro-text {
+		font-size: 1em !important;
+	}
+	.front-page #introduction .intro-icon {
+		width: 140px !important;
+		height: 140px !important;
+	}
+	.front-page #introduction .intro-icon i {
+		font-size: 60px !important;
+	}
+	.front-page #introduction .item  h2 {
+		margin: 160px 0 0 !important;
+	}
+	.front-page #introduction .item p {
+		font-size: 0.8em;
+		word-wrap: break-word;
+	}
+
+	/*WORKS*/
+	#works {
+		padding: 30px 0 50px !important;
+	}
+	#works .card {
+		padding: 8px !important;
+	}
+
+	/*CONTACTME*/
+	#contactme {
+		padding: 30px 0 !important;
+	}
+	#contactme p.contact-info {
+		font-size: 1em !important;
+		line-height: 1.5em !important;
+	}
+	#contactme input[type="text"], #contactme input[type="email"] {
+		margin-bottom: 10px;
+	}
+	#contactme textarea {
+		margin: 0 !important;
+	}
+
+
+	/*Other Sections*/
+	h1.section-title {
+		font-size: 2.5em !important;
+	}
+}
+
+/*
+MEDIUM ONLY <1024px and >=640px
+*/
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+
+}
+
+/*
+MEDIUM BELOW <1024px
+*/
+
+@media screen and (max-width: 63.9375em) {
+
+}
+
+/*
+LARGE AND UP >=1024px
+*/
+@media screen and (min-width: 64em) {
+
+}
+
+/*
+LARGE ONLY
+*/
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {
+
+}
