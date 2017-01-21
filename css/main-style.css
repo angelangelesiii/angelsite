@@ -693,6 +693,11 @@ section.single-post-page a:hover
 	color: #745A00;
 	border-bottom: dotted 1px #745A00;
 }
+section.single-post-page .the-content a.media-img:link,
+section.single-post-page .the-content a.media-img:visited,
+section.single-post-page .the-content a.media-img:hover {
+	border-bottom: none !important;
+}
 section.single-post-page h1,
 section.single-post-page h2,
 section.single-post-page h3,
@@ -978,6 +983,9 @@ SMALL ONLY <640px
 	}
 	#works .card {
 		padding: 8px !important;
+	}
+	#works .card .content h2 {
+		font-size: 1.1em;
 	}
 
 	/*CONTACTME*/
