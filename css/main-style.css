@@ -921,6 +921,17 @@ h4.comments-title {
 SMALL ONLY <640px
 */
 @media screen and (max-width: 39.9375em) {
+	/*MENU*/
+	#menu-pane {
+		padding: 15px 25px !important;
+	}
+	#menu-pane .top-bar i {
+		margin: 0 0 10px !important;
+	}
+	#menusearchform input[type="text"] {
+		font-size: 1em;
+	}
+
 	a.btn:link, a.btn:visited {
 		padding: 5px 20px !important;
 		font-size: 0.8em;
