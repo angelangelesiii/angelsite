@@ -5,8 +5,8 @@ html, body {
 body {
 	font-family: 'Lato', sans-serif;
 }
-main.site-main {
-	padding: 50px 0;
+.content-area {
+	padding-bottom: 50px;
 }
 p {
 	font-size: 1.1em;
@@ -485,6 +485,9 @@ footer.site-footer .footer-heading p.copyright {
 }
 
 /*---------ARCHIVE PAGE---------*/
+.blog-header {
+	margin-top: 50px;
+}
 .blog-header p {
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
@@ -663,6 +666,9 @@ article.post-item .archive-article-container a.moretag:hover {
 
 
 /*SINGLE*/
+.page-space {
+	height: 20px;
+}
 section.single-post-page {
 	/*padding-bottom: 50px;*/
 }
@@ -901,5 +907,6 @@ h4.comments-title {
 	color: #4E4E4E;
 }
 .archive header.page-header {
+	margin-top: 50px;
 	margin-bottom: 70px;
 }

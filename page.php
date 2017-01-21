@@ -16,7 +16,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
+			<div class="page-space"></div>
 			<section class="single-post-page">
 				<div class="wrapper">
 					<?php
