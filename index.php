@@ -26,7 +26,7 @@ get_header(); ?>
 					<div class="divider"></div>
 				</div>
 			<?php }	?>
-			<div style="height: 40px;"></div>
+			<div style="height: 40px;" class="hide-for-small-only"></div>
 			<?php
 				if ( have_posts() ) :
 				

@@ -28,7 +28,7 @@ get_header(); ?>
 					</p>
 				</div>
 				<div class="wrapper-big">
-					<div class="row icons">
+					<div class="row small-collapse icons">
 						<div class="column item large-3 small-6">
 							<div class="intro-icon">
 								<div class="yellow-hover"></div>

@@ -192,6 +192,8 @@ function new_excerpt_more($more) {
  
 add_filter( 'excerpt_more', 'new_excerpt_more' );
 
+
+// ADD CLASS TO LINKS WITH IMAGES
 function add_classes_to_linked_images($html) {
     $classes = 'media-img'; // can do multiple classes, separate with space
 

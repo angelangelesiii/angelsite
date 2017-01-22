@@ -29,16 +29,16 @@
 						<a href="http://www.instagram.com/angelangelesiii">
 							<i class="fa fa-instagram" aria-hidden="true"></i>
 						</a>
-						<a href="">
+						<a href="https://twitter.com/angelangelesiii">
 							<i class="fa fa-twitter" aria-hidden="true"></i>
 						</a>
-						<a href="">
+						<a href="https://plus.google.com/+AngelAngelesIII">
 							<i class="fa fa-google-plus-official" aria-hidden="true"></i>
 						</a>
-						<a href="">
+						<a href="http://angelangeles.deviantart.com/">
 							<i class="fa fa-deviantart" aria-hidden="true"></i>
 						</a>
-						<a href="">
+						<a href="https://www.behance.net/angelangelesiii">
 							<i class="fa fa-behance" aria-hidden="true"></i>
 						</a>
 						<a href="https://soundcloud.com/angelangelesiii">
