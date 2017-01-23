@@ -57,8 +57,7 @@ jQuery(document).ready(function($){
 
 	var worksTransition = new ScrollMagic.Scene({
 		triggerElement: '#workshook',
-		triggerHook: 1,
-		offset: 300
+		triggerHook: 0.8,
 	})
 	.setTween(worksTL)
 	// .addIndicators()
