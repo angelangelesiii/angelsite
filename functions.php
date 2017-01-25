@@ -215,3 +215,49 @@ function add_classes_to_linked_images($html) {
 }
 
 add_filter('the_content', 'add_classes_to_linked_images', 100, 1);
+
+// FACEBOOK OPEN GRAPH
+function doctype_opengraph($output) {
+    return $output . '
+    xmlns:og="http://opengraphprotocol.org/schema/"
+    xmlns:fb="http://www.facebook.com/2008/fbml"';
+}
+add_filter('language_attributes', 'doctype_opengraph');
+
+function fb_opengraph() {
+    global $post;
+    global $wp;
+	$current_url = home_url(add_query_arg(array(),$wp->request));
+ 
+    if(is_front_page()) {
+    	?>
+	<meta property="og:title" content="Angel Angeles III's Portfolio and Blog" />
+	<meta property="og:description" content="Angel Angeles III: Web Designer, Developer, Musician and Graphic Artist"/>
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="<?php echo get_home_url(); ?>" />
+	<meta property="og:image" content="<?php echo get_template_directory_uri().'/screenshot.png' ?>" />
+    	<?php
+    } else if (is_single()||is_page()) {
+    	if(has_post_thumbnail($post->ID)) {
+            $img_src = wp_get_attachment_image_src(get_post_thumbnail_id( $post->ID ), 'medium');
+        } else {
+            $img_src = get_template_directory_uri().'/screenshot.png';
+        }
+    	?>
+	<meta property="og:title" content="<?php echo the_title(); ?>" />
+	<meta property="og:description" content="<?php echo the_excerpt(); ?>"/>
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="<?php echo the_permalink(); ?>" />
+	<meta property="og:image" content="<?php echo $img_src; ?>" />
+    	<?php
+    } else {
+    	?>
+	<meta property="og:title" content="<?php echo the_archive_title(); ?>" />
+	<meta property="og:type" content="blog" />
+	<meta property="og:url" content="<?php echo $current_url; ?>" />
+	<meta property="og:image" content="<?php echo get_template_directory_uri().'/screenshot.png' ?>" />
+    	<?php
+    }
+}
+
+add_action('wp_head', 'fb_opengraph', 2);
