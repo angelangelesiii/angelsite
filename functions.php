@@ -232,19 +232,19 @@ function fb_opengraph() {
     if(is_front_page()) {
     	?>
 	<meta property="og:title" content="Angel Angeles III's Portfolio and Blog" />
-	<meta property="og:description" content="Angel Angeles III: Web Designer, Developer, Musician and Graphic Artist"/>
+	<meta property="og:description" content="The official website, portolio and blog of the web designer and devloper Angel Angeles III."/>
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="<?php echo get_home_url(); ?>" />
 	<meta property="og:image" content="<?php echo get_template_directory_uri().'/screenshot.png' ?>" />
     	<?php
     } else if (is_single()||is_page()) {
     	if(has_post_thumbnail($post->ID)) {
-            $img_src = wp_get_attachment_image_src(get_post_thumbnail_id( $post->ID ), 'medium');
+            $img_src = wp_get_attachment_url( get_post_thumbnail_id($post->ID));
         } else {
             $img_src = get_template_directory_uri().'/screenshot.png';
         }
     	?>
-	<meta property="og:title" content="<?php echo the_title(); ?>" />
+	<meta property="og:title" content="<?php echo the_title().' - Angel Angeles III'; ?>" />
 	<meta property="og:description" content="<?php echo the_excerpt(); ?>"/>
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="<?php echo the_permalink(); ?>" />
@@ -252,7 +252,8 @@ function fb_opengraph() {
     	<?php
     } else {
     	?>
-	<meta property="og:title" content="<?php echo the_archive_title(); ?>" />
+	<meta property="og:title" content="<?php echo the_archive_title().' - Angel Angeles III'; ?>" />
+	<meta property="og:description" content="View the latest from my website."/>
 	<meta property="og:type" content="blog" />
 	<meta property="og:url" content="<?php echo $current_url; ?>" />
 	<meta property="og:image" content="<?php echo get_template_directory_uri().'/screenshot.png' ?>" />
